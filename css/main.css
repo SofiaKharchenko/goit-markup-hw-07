@@ -282,22 +282,6 @@ summary {
   display: list-item;
 }
 
-:root {
-  --border-color: #eeeeee;
-  --white-text: rgba(255, 255, 255, 1);
-  --black-text: rgba(33, 33, 33, 1);
-  --grey-text: rgba(117, 117, 117, 1);
-  --white-text-op60: rgba(255, 255, 255, 0.6);
-  --blue-text: rgba(33, 150, 243, 1);
-  --hero-background: rgba(47, 48, 58, 1);
-  --team-background: rgba(245, 244, 250, 1);
-  --border-bottom: #ececec;
-  --clients-svg: rgba(175, 177, 184, 1);
-  --footer-bg-items: rgba(255, 255, 255, 0.1);
-  --modal-btn: rgba(33, 150, 243);
-  --white-text-op60: rgba(255, 255, 255, 0.6);
-}
-
 section {
   padding: 94px 0;
 }
@@ -362,6 +346,22 @@ textarea {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+:root {
+  --border-color: #eeeeee;
+  --white-text: rgba(255, 255, 255, 1);
+  --black-text: rgba(33, 33, 33, 1);
+  --grey-text: rgba(117, 117, 117, 1);
+  --white-text-op60: rgba(255, 255, 255, 0.6);
+  --blue-text: rgba(33, 150, 243, 1);
+  --hero-background: rgba(47, 48, 58, 1);
+  --team-background: rgba(245, 244, 250, 1);
+  --border-bottom: #ececec;
+  --clients-svg: rgba(175, 177, 184, 1);
+  --footer-bg-items: rgba(255, 255, 255, 0.1);
+  --modal-btn: rgba(33, 150, 243);
+  --white-text-op60: rgba(255, 255, 255, 0.6);
 }
 
 .container {
