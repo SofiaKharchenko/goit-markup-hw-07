@@ -19,7 +19,7 @@
   padding-bottom: 200px;
 }
 
-.hero-btn {
+.hero__button {
   border: var(--blue-text);
   background: var(--blue-text);
   color: var(--white-text);
@@ -33,7 +33,7 @@
   border-radius: 4px;
 }
 
-.title {
+.hero__title {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 44px;

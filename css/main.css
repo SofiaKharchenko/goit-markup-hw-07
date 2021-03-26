@@ -534,7 +534,7 @@ body {
   padding-bottom: 60px;
 }
 
-.footer-container {
+.footer__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -546,7 +546,7 @@ body {
           justify-content: space-between;
 }
 
-.main-footer {
+.footer__main {
   margin-right: 70px;
 }
 
@@ -554,7 +554,7 @@ body {
   color: var(--white-text);
 }
 
-.adress-text {
+.adress__text {
   color: var(--white-text);
   font-weight: 400;
   font-size: 14px;
@@ -563,7 +563,7 @@ body {
   padding-top: 20px;
 }
 
-.contacts-foot a {
+.address__list a {
   color: var(--white-text-op60);
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -572,22 +572,22 @@ body {
   letter-spacing: 0.03em;
 }
 
-.contacts-foot a:hover, .contacts-foot a:focus {
+.address__list a:hover, .address__list a:focus {
   color: var(--blue-text);
 }
 
-.contacts-foot li {
+.address__list li {
   padding-top: 9px;
 }
 
-.footer-contact-list {
+.follow-us__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.follow-us-title,
-.sign-us-title {
+.follow-us__title,
+.sign-us__title {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 14px;
@@ -598,11 +598,11 @@ body {
   margin-bottom: 20px;
 }
 
-.footer-contact-item:not(:last-child) {
+.follow-us__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.footer-contact-link {
+.follow-us__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -621,17 +621,17 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-contact-link:hover, .footer-contact-link:focus {
+.follow-us__link:hover, .follow-us__link:focus {
   background-color: var(--blue-text);
 }
 
-.footer-contact-svg {
+.follow-us__svg {
   fill: currentColor;
   /* transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);  */
 }
 
-.address-link {
+.address__link {
   color: var(--white-text-op60);
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -641,7 +641,7 @@ body {
   margin-left: 93px;
 }
 
-.sign-us-form {
+.sign-us__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -650,7 +650,7 @@ body {
           align-items: center;
 }
 
-.sign-us-input {
+.sign-us__input {
   width: 358px;
   height: 50px;
   padding: 16px 15px;
@@ -665,28 +665,28 @@ body {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.sign-us-input::-webkit-input-placeholder {
+.sign-us__input::-webkit-input-placeholder {
   color: var(--white-text-op60);
 }
 
-.sign-us-input:-ms-input-placeholder {
+.sign-us__input:-ms-input-placeholder {
   color: var(--white-text-op60);
 }
 
-.sign-us-input::-ms-input-placeholder {
+.sign-us__input::-ms-input-placeholder {
   color: var(--white-text-op60);
 }
 
-.sign-us-input::placeholder {
+.sign-us__input::placeholder {
   color: var(--white-text-op60);
 }
 
-.sign-us-input:focus {
+.sign-us__input:focus {
   outline: none;
   border-color: var(--blue-text);
 }
 
-.sign-us-button {
+.sign-us__button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -711,7 +711,7 @@ body {
   margin-left: 12px;
 }
 
-.sign-us-svg {
+.sign-us__svg {
   margin-left: 10px;
 }
 
@@ -732,7 +732,7 @@ body {
   padding-bottom: 200px;
 }
 
-.hero-btn {
+.hero__button {
   border: var(--blue-text);
   background: var(--blue-text);
   color: var(--white-text);
@@ -746,7 +746,7 @@ body {
   border-radius: 4px;
 }
 
-.title {
+.hero__title {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 44px;
