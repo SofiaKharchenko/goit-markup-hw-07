@@ -1100,7 +1100,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-.advantages-img .img-items {
+.advantages-img .we-doing__items {
   -ms-flex-preferred-size: calc(100% / 3);
       flex-basis: calc(100% / 3);
   margin-top: 50px;
@@ -1121,16 +1121,16 @@ body {
   text-align: center;
 }
 
-.img-items:not(:last-child) {
+.we-doing__items:not(:last-child) {
   margin-right: 30px;
 }
 
-.advantages-thumb {
+.advantages__thumb {
   position: relative;
   height: 294px;
 }
 
-.adv-img-text {
+.adv-img__text {
   position: absolute;
   bottom: 0;
   width: 100%;
