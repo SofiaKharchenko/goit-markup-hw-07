@@ -1,4 +1,4 @@
-.backdrop {
+.order__backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -11,7 +11,7 @@
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal {
+.order__modal {
   position: absolute;
   z-index: auto;
   top: 50%;
@@ -27,7 +27,7 @@
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.is-hidden .modal {
+.is-hidden .order__modal {
   transform: translate(-50%, -50%) scale(0.9);
 }
 
@@ -37,7 +37,7 @@
   pointer-events: none;
 }
 
-.close-btn {
+.order__close-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,53 +50,49 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--white-text);
   cursor: pointer;
+
+  &:hover .order__close-svg,
+  &:focus .order__close-svg {
+    fill: var(--blue-text);
+  }
+
+  &:active {
+    outline: none;
+  }
 }
 
-.close-btn:active {
-  outline: none;
-}
-
-.close-btn-svg {
+.order__close-svg {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-btn:hover .close-btn-svg,
-.close-btn:focus .close-btn-svg {
-  fill: var(--blue-text);
-}
-
-.form-order {
+.order__form {
   display: flex;
   flex-direction: column;
+  margin-top: 28px;
 }
 
-.window-p {
+.order__text {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-align: center;
-  color: var(--black-text);
 }
 
-.form-order {
-  margin-top: 28px;
-}
-
-.form-label {
+.form__label {
   position: relative;
   display: block;
   margin-bottom: 28px;
 }
 
-.form-label-text {
+.form__label--text {
   position: relative;
   display: block;
   margin-bottom: 20px;
 }
 
-.form-name {
+.form__name {
   position: absolute;
   top: -18px;
   font-family: 'Roboto', sans-serif;
@@ -107,7 +103,7 @@
   color: var(--grey-text);
 }
 
-.form-input {
+.form__input {
   position: relative;
   display: block;
   width: 100%;
@@ -115,27 +111,17 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 11px 12px 11px 42px;
-}
 
-.form-input {
   &:focus {
     outline: none;
     border-color: var(--blue-text);
   }
-}
-
-.form-input:focus ~ .form-svg {
-  fill: var(--blue-text);
-}
-
-.form-textarea {
-  &:focus {
-    outline: none;
-    border-color: var(--blue-text);
+  &:focus ~ .form__svg {
+    fill: var(--blue-text);
   }
 }
 
-.form-textarea {
+.form__textarea {
   display: block;
   resize: none;
   width: 100%;
@@ -143,18 +129,23 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 12px 16px;
+
+  &::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--blue-text);
+  }
 }
 
-.form-textarea::placeholder {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.agree-text {
+.agreement__text {
   display: flex;
   align-items: center;
   padding-left: 12px;
@@ -165,40 +156,25 @@
   letter-spacing: 0.03em;
   color: rgba(117, 117, 117, 1);
   cursor: pointer;
+
+  &::before {
+    margin-right: 8px;
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    background-image: url(../images/icon-uncheck.svg);
+    background-size: cover;
+    border-radius: 2px;
+  }
 }
 
-.agree-text::before {
-  margin-right: 8px;
-  content: '';
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  background-image: url(../images/icon-uncheck.svg);
-  background-size: cover;
-  border-radius: 2px;
-}
-
-.agree-check:checked + .agree-text::before {
-  background-color: var(--blue-text);
-  background-image: url(../images/icon-check.svg);
-  background-size: cover;
-  border-radius: 2px;
-}
-
-.agree-link {
+.agreement__link {
   color: var(--blue-text);
   text-decoration: underline;
 }
 
-.agree-check-img {
-  background-color: var(--white-text);
-  border: 2px solid var(--black-text);
-  border-radius: 2px;
-  width: 16px;
-  height: 15px;
-}
-
-.agree-check {
+.agreement__check {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -209,9 +185,18 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+
+  &:checked + .agreement__text {
+    &::before {
+      background-color: var(--blue-text);
+      background-image: url(../images/icon-check.svg);
+      background-size: cover;
+      border-radius: 2px;
+    }
+  }
 }
 
-.form-svg {
+.form__svg {
   position: absolute;
   bottom: 11px;
   left: 12px;
@@ -221,7 +206,7 @@
   display: block;
 }
 
-.form-btn {
+.form__button {
   display: block;
   margin: 0 auto;
   width: 200px;
